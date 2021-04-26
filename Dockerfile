@@ -1,5 +1,5 @@
 FROM amd64/python:3
-MAINTAINER "henrique@breim.com.br"
+MAINTAINER "moshe@webstorm.co.il"
 
 WORKDIR /home
 
