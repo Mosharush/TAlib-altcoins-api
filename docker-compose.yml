@@ -1,12 +1,22 @@
 version: '3.8'
 services:
-  web:
-    container_name: crypto-pm2-web
-    build: .
+  indicators:
+    container_name: crypto_indicators
+    image: amd64/python:3
+    build:
+      context: ../indicator-api
     ports:
       - 5000:5000
     restart: always
+    networks:
+      - crypto-network
     logging:
       options:
         max-size: "5m"
         max-file: "3"
+
+networks:
+  crypto-network:
+
+volumes:
+  indicators:
